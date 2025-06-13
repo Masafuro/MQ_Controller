@@ -1,0 +1,36 @@
+# version: '3.8'
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto:2
+    container_name: mosquitto
+    ports:
+      - "1883:1883"     # MQTT
+      - "9001:9001"     # WebSocket
+      - "8883:8883"     # Secure MQTT (wss)
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+      - ./mosquitto/data:/mosquitto/data
+      - ./mosquitto/log:/mosquitto/log
+
+  redis:
+    image: redis:7
+    container_name: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+
+  backend:
+    image: python:3.11-slim
+    container_name: backend
+    working_dir: /app
+    volumes:
+      - ./backend:/app
+    command: sleep infinity  # 開発時にはここを手動実行にする
+    depends_on:
+      - redis
+      - mosquitto
+
+volumes:
+  redis-data:

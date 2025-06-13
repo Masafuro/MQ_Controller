@@ -1,0 +1,31 @@
+1749814173: mosquitto version 2.0.21 starting
+1749814173: Config loaded from /mosquitto/config/mosquitto.conf.
+1749814173: Opening ipv4 listen socket on port 1883.
+1749814173: Opening ipv6 listen socket on port 1883.
+1749814173: Opening websockets listen socket on port 9001.
+1749814173: Opening ipv4 listen socket on port 1883.
+1749814173: Error: Address in use
+1749814337: mosquitto version 2.0.21 starting
+1749814337: Config loaded from /mosquitto/config/mosquitto.conf.
+1749814337: Opening ipv4 listen socket on port 1883.
+1749814337: Opening ipv6 listen socket on port 1883.
+1749814337: Opening websockets listen socket on port 9001.
+1749814337: Opening ipv4 listen socket on port 1883.
+1749814337: Error: Address in use
+1749814514: mosquitto version 2.0.21 starting
+1749814514: Config loaded from /mosquitto/config/mosquitto.conf.
+1749814514: Opening ipv4 listen socket on port 1883.
+1749814514: Opening ipv6 listen socket on port 1883.
+1749814514: Opening websockets listen socket on port 9001.
+1749814514: mosquitto version 2.0.21 running
+1749814624: mosquitto version 2.0.21 terminating
+1749814624: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749814631: mosquitto version 2.0.21 starting
+1749814631: Config loaded from /mosquitto/config/mosquitto.conf.
+1749814631: Opening ipv4 listen socket on port 1883.
+1749814631: Opening ipv6 listen socket on port 1883.
+1749814631: Opening websockets listen socket on port 9001.
+1749814631: mosquitto version 2.0.21 running
+1749814652: New connection from 172.21.144.1:60890 on port 1883.
+1749814652: New client connected from 172.21.144.1:60890 as mqttx_d256375f (p5, c1, k60).
+1749814696: Client mqttx_d256375f disconnected.
