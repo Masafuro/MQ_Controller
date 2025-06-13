@@ -9,4 +9,20 @@
   <h1>こんにちは Flask + HTML</h1>
   <p>これは Flask で配信している index.html です。</p>
 </body>
+<script>
+async function registerClient() {
+  const response = await fetch('/api/register', {
+    method: 'POST'
+  });
+  const data = await response.json();
+  console.log('UUID:', data.uuid);
+  console.log('Token:', data.token);
+
+  // 必要であればここで MQTT 接続やUI初期化などを開始
+}
+
+window.addEventListener('DOMContentLoaded', registerClient);
+</script>
+
+
 </html>
