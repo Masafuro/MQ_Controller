@@ -10,6 +10,8 @@
 - git add .
 - git commit -m "msg"
 - git push origin main
+- git pull origin main
+    - 引込 
 
 ### dockerの使い方
 - sudo service docker start
