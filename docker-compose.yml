@@ -22,19 +22,15 @@ services:
       - redis-data:/data
 
   backend:
-    image: python:3.11-slim
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
     container_name: backend
-    working_dir: /app
-    volumes:
-      - ./backend:/app
     ports:
       - "8000:8000"
-    command: python3 app.py
-    # command: sleep infinity  # 開発時にはここを手動実行にする
     depends_on:
       - redis
       - mosquitto
-  
 
 volumes:
   redis-data:
