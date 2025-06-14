@@ -5,7 +5,8 @@ import uuid
 
 # frontend フォルダへの絶対パスを取得
 base_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-frontend_path = os.path.join(base_dir, 'frontend')
+# frontend_path = os.path.join(base_dir, 'frontend')
+frontend_path = '/frontend'
 
 app = Flask(__name__, static_folder=frontend_path)
 
