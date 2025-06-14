@@ -4,6 +4,10 @@
 
 - WSLのdocker上の構築
 
+### ubuntu
+- logout
+- > su - {username}
+
 
 ### githubの使い方
 - git status
@@ -17,8 +21,11 @@
 - sudo service docker start
 - docker info
 - docker ps
-- docker compose up
+- docker compose up -d --build
     - docker-compose.ymlに基づいて起動
+    - 現在、httpも起動する
+- docker compose down
+    - dockerを落とす 
 
 ### mosquittoの使い方
 - ip addr show eth0 | grep 'inet ' | awk '{print $2}' | cut -d/ -f1
