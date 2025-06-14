@@ -15,7 +15,10 @@
 - git commit -m "msg"
 - git push origin main
 - git pull origin main
-    - 引込 
+    - 引込
+- git checkout -- mosquitto/log/mosquitto.log
+    - 放棄 
+
 
 ### dockerの使い方
 - sudo service docker start
