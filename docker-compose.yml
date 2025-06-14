@@ -27,13 +27,14 @@ services:
     working_dir: /app
     volumes:
       - ./backend:/app
-    # command: sleep infinity  # 開発時にはここを手動実行にする
-    command: python3 app.py
     ports:
       - "8000:8000"
+    command: python3 app.py
+    # command: sleep infinity  # 開発時にはここを手動実行にする
     depends_on:
       - redis
       - mosquitto
+  
 
 volumes:
   redis-data:
