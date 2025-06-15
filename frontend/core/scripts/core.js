@@ -93,3 +93,37 @@ function handleElementCommand(payload) {
       console.error("Unknown action:", action);
   }
 }
+
+
+function connectMQTT() {
+  // Paho.MQTT.Client(ホスト名, ポート番号, パス, クライアントID)
+  const client = new Paho.MQTT.Client("localhost", 9001, "/mqtt", "web-client-" + Math.random());
+
+  // 接続が切れたときのハンドラ
+  client.onConnectionLost = function(responseObject) {
+    console.log("Connection lost:", responseObject.errorMessage);
+  };
+
+  // メッセージ受信時のハンドラ
+  client.onMessageArrived = function(message) {
+    console.log("Received:", message.destinationName, message.payloadString);
+  };
+
+  // 接続オプション
+  const options = {
+    onSuccess: function() {
+      console.log("Connected to MQTT broker");
+      client.subscribe("test/topic");
+
+      // デモ用に即時publish
+      const message = new Paho.MQTT.Message("Hello from browser");
+      message.destinationName = "test/topic";
+      client.send(message);
+    },
+    onFailure: function(e) {
+      console.error("Connection failed:", e.errorMessage);
+    }
+  };
+
+  client.connect(options);
+}
