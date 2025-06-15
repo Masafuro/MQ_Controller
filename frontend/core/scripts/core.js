@@ -97,8 +97,12 @@ function handleElementCommand(payload) {
 
 function connectMQTT() {
   // Paho.MQTT.Client(ホスト名, ポート番号, パス, クライアントID)
-  const client = new Paho.MQTT.Client("localhost", 9001, "/mqtt", "web-client-" + Math.random());
-
+  //const client = new Paho.MQTT.Client("localhost", 9001, "/mqtt", "web-client-" + Math.random());
+  //const client = new Paho.MQTT.Client("ws://localhost/mqtt", "client-id");
+  //const client = new Paho.MQTT.Client("ws://172.21.151.45/mqtt", "client-id");
+  const host = window.location.hostname;
+  const client = new Paho.MQTT.Client("172.21.151.45", 8000, "/mqtt/", "client-id");
+  //const client = new Paho.MQTT.Client(host, 8000, "/mqtt", "client-id");
   // 接続が切れたときのハンドラ
   client.onConnectionLost = function(responseObject) {
     console.log("Connection lost:", responseObject.errorMessage);
