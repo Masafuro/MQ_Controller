@@ -29,3 +29,67 @@ function scheduleReload(delayMs = 24 * 60 * 60 * 1000) {
         location.href = url.toString();
     }, delayMs);
 }
+
+
+// メッセージの展開
+
+function handleMessage(message) {
+  const command = message.command || "ui_update";
+  const target = message.target || "element";
+  const payload = message.payload || {};
+
+  if (command === "ui_update") {
+    switch (target) {
+      case "element":
+        handleElementCommand(payload);
+        break;
+      default:
+        console.error("Unsupported UI target:", target);
+    }
+  } else {
+    console.error("Unknown command:", command);
+  }
+}
+
+function handleElementCommand(payload) {
+  const { selector, action, value } = payload;
+
+  const el = document.querySelector(selector);
+  if (!el) {
+    console.error("Element not found:", selector);
+    return;
+  }
+
+  switch (action) {
+    case "set_text":
+      el.textContent = value;
+      break;
+
+    case "set_html":
+      el.innerHTML = value;
+      break;
+
+    case "set_value":
+      el.value = value;
+      break;
+
+    case "add_class":
+      el.classList.add(value);
+      break;
+
+    case "remove_class":
+      el.classList.remove(value);
+      break;
+
+    case "show":
+      el.style.display = "";
+      break;
+
+    case "hide":
+      el.style.display = "none";
+      break;
+
+    default:
+      console.error("Unknown action:", action);
+  }
+}
