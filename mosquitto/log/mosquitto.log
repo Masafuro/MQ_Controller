@@ -114,3 +114,27 @@
 1749926959: Client <unknown> disconnected due to protocol error.
 1749928447: mosquitto version 2.0.21 terminating
 1749928447: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749928941: mosquitto version 2.0.21 starting
+1749928941: Config loaded from /mosquitto/config/mosquitto.conf.
+1749928941: Opening ipv4 listen socket on port 1883.
+1749928941: Opening ipv6 listen socket on port 1883.
+1749928941: Opening websockets listen socket on port 9001.
+1749928941: mosquitto version 2.0.21 running
+1749928944: New connection from 172.18.0.1:34184 on port 1883.
+1749928944: Client <unknown> disconnected due to protocol error.
+1749928945: New connection from 172.18.0.1:34190 on port 1883.
+1749928945: Client <unknown> disconnected due to protocol error.
+1749928950: New connection from 172.18.0.1:34200 on port 1883.
+1749928950: Client <unknown> disconnected due to protocol error.
+1749930742: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749932543: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749934344: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749936145: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749937947: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749939748: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749941549: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749943350: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749945151: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749946952: Saving in-memory database to /mosquitto/data//mosquitto.db.
+1749947231: mosquitto version 2.0.21 terminating
+1749947231: Saving in-memory database to /mosquitto/data//mosquitto.db.

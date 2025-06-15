@@ -9,17 +9,21 @@
   <h1>こんにちは Flask + HTML</h1>
   <p>これは Flask で配信している index.html です。</p>
 </body>
+
+
+
+<script src="core/scripts/core.js"></script>
+
 <script>
     
 async function registerClient() {
-  const response = await fetch('/api/register', {
-    method: 'POST'
-  });
-  const data = await response.json();
-  console.log('UUID:', data.uuid);
-  console.log('Token:', data.token);
+  // セキュリティ上のID再発行のため、デフォルトで6時間後にリロード
+  scheduleReload(); 
 
-  // 必要であればここで MQTT 接続やUI初期化などを開始
+  //ID発行
+  const secret = generateSecretBase64URL(); // 出力例: "fRJdVg2XKoPov7sHMe9mTw"
+  console.log(secret);
+  
 }
 
 window.addEventListener('DOMContentLoaded', registerClient);
