@@ -97,10 +97,14 @@ function handleElementCommand(payload) {
 
 function connectMQTT() {
   // Paho.MQTT.Client(ホスト名, ポート番号, パス, クライアントID)
-  const host = window.location.hostname;
-  const port = window.location.port || 80; // ポート指定がなければ80を仮定（httpのデフォルト）
+  //const host = window.location.hostname;
+  //const port = window.location.port || 80; // ポート指定がなければ80を仮定（httpのデフォルト）
+  //const client = new Paho.MQTT.Client(host, Number(port), "/mqtt/", "client-id");
 
-  const client = new Paho.MQTT.Client(host, Number(port), "/mqtt/", "client-id");
+  const host = window.location.hostname;
+  const port = window.location.port || 443;
+  const client = new Paho.MQTT.Client(`wss://${host}:${port}/mqtt/`, "client-id");
+
   //const client = new Paho.MQTT.Client("172.21.151.45", 8000, "/mqtt/", "client-id");
   // 接続が切れたときのハンドラ
   client.onConnectionLost = function(responseObject) {

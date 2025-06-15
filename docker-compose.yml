@@ -4,11 +4,13 @@ services:
   nginx:
     build:
       context: .
-      dockerfile: Dockerfile  # nginx用のDockerfile
+      dockerfile: Dockerfile
     ports:
-      - "8000:80"
+      - "80:80"
+      - "443:443"  # ← ホスト側も443番を使用
     volumes:
       - ./frontend:/usr/share/nginx/html
+      - ./certs:/etc/nginx/certs
 
   mosquitto:
     image: eclipse-mosquitto:2
