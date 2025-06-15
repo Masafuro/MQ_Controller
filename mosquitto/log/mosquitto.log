@@ -259,3 +259,5 @@
 1749985150: New client connected from ::ffff:172.21.144.1:52237 as mqttx_26c2d457 (p5, c1, k60).
 1749985168: Client client-id closed its connection.
 1749985184: Client mqttx_26c2d457 closed its connection.
+1749985816: mosquitto version 2.0.21 terminating
+1749985816: Saving in-memory database to /mosquitto/data//mosquitto.db.
