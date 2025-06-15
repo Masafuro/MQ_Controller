@@ -211,3 +211,10 @@
 1749976991: mosquitto version 2.0.21 running
 1749977357: New client connected from ::ffff:172.18.0.2:50046 as client-id (p2, c1, k60).
 1749977369: New client connected from ::ffff:172.21.144.1:63608 as mqttx_26c2d457 (p5, c1, k60).
+1749977477: Client client-id closed its connection.
+1749977561: New client connected from ::ffff:172.18.0.2:47836 as client-id (p2, c1, k60).
+1749977568: Client client-id closed its connection.
+1749977574: New client connected from ::ffff:172.18.0.2:36880 as client-id (p2, c1, k60).
+1749977634: Client client-id closed its connection.
+1749977795: Client mqttx_26c2d457 closed its connection.
+1749977800: New client connected from ::ffff:172.21.144.1:63883 as mqttx_26c2d457 (p5, c1, k60).
